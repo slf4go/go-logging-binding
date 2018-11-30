@@ -44,6 +44,8 @@ func (GoLoggingImpl) Log(level slf4go.Level, msg string, stack []string) {
 		logFunc = log.Info
 	case slf4go.LogDebug:
 		logFunc = log.Debug
+	case slf4go.LogTrace:
+		logFunc = log.Debug
 	}
 
 	logFunc(msg)
